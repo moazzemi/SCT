@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Automata name="Untitled" major="0" minor="9">
+<Automaton name="power_budget_big||power_budget_big_spec2" type="Plant">
+	<Events>
+		<Event id="0" label="critical"/>
+		<Event id="1" label="decrease1"/>
+		<Event id="2" label="fix1"/>
+		<Event id="3" label="increase1"/>
+	</Events>
+	<States>
+		<State id="0" name="critical.critical" accepting="true"/>
+		<State id="1" name="growth1.growth" accepting="true" forbidden="true" cost="1.7976931348623157E308"/>
+		<State id="2" name="reduction1.reduction" accepting="true"/>
+		<State id="3" name="stable1.critical" accepting="true"/>
+		<State id="4" name="stable1.growth" accepting="true" forbidden="true" cost="1.7976931348623157E308"/>
+		<State id="5" name="stable1.reduction" accepting="true"/>
+		<State id="6" name="stable1.stable" initial="true" accepting="true"/>
+	</States>
+	<Transitions>
+		<Transition source="0" dest="2" event="1"/>
+		<Transition source="0" dest="3" event="2"/>
+		<Transition source="0" dest="1" event="3"/>
+		<Transition source="1" dest="0" event="0"/>
+		<Transition source="1" dest="4" event="2"/>
+		<Transition source="2" dest="0" event="0"/>
+		<Transition source="2" dest="5" event="2"/>
+		<Transition source="3" dest="2" event="1"/>
+		<Transition source="3" dest="1" event="3"/>
+		<Transition source="4" dest="0" event="0"/>
+		<Transition source="5" dest="0" event="0"/>
+		<Transition source="6" dest="0" event="0"/>
+	</Transitions>
+</Automaton>
+</Automata>
