@@ -1,0 +1,11 @@
+GeneratorModel for yakindu::cpp {
+
+	statechart simple {
+
+		feature Outlet {
+			targetProject = "simple"
+			targetFolder = "src-gen"
+			libraryTargetFolder = "src"
+		}
+	}
+}
